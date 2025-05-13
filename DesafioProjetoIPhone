@@ -1,0 +1,37 @@
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonico {
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class IPhone {
+        +modelo: String
+    }
+
+    class Smartphone
+
+    class Contato {
+        +nome: String
+        +telefone: String
+    }
+
+    IPhone --|> Smartphone
+
+    IPhone ..|> ReprodutorMusical
+    IPhone ..|> AparelhoTelefonico
+    IPhone ..|> NavegadorInternet
+
+    IPhone --> Contato : acessa
